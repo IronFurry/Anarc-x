@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Credits</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="credits.css">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo"><img src="logo.svg" /></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="credits.html">Credits</a>
+      <a href="buy.html">Anarc Watch</a>
+      <a href="#">Skins</a>
+    </div>
+    <div class="actions">
+      <a href="buy.html">
+        <button>Buy Now</button>
+      </a>
+      <i class="fas fa-search"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </nav>
+
+  <!-- Main Credits Section -->
+  <div class="credits">
+    <h1>Credits</h1>
+    <div class="watch-wrapper">
+    <div class="watch-strap left"></div>  
+    <div class="watch-dial">
+    <div class="screen">
+      <h2 >&nbsp; Our Journey</h2>
+      <p>
+        This project started as a simple idea — to create something unique and functional. With no prior
+        experience in web development, I embarked on a journey to learn and build. The first step was
+        learning HTML, CSS, and JavaScript from scratch. Each day brought new challenges, but the thrill
+        of seeing things come together kept me going.
+        <br /><br />
+        The website’s design was inspired by the clean and modern aesthetic of Layers.shop, while I drew
+        inspiration from UI elements I found on Dribbble. After countless hours, this site was born with a
+        combination of hard work, determination, and creativity.
+        <br /><br />
+        It may not be perfect, but this website is a representation of what can be achieved with passion
+        and perseverance. Every pixel, animation, and detail was crafted with care, and I am proud to
+        present it here for everyone to &nbsp; &nbsp;&nbsp;&nbsp;explore.
+      </p>
+    </div></div>
+    <div class="watch-strap right"></div>
+</div>
+
+    <div class="credit-category">
+      <h2>Development</h2>
+      <p>Crafted with passion and countless late-night sessions by Aryan — from writing the very first line of HTML to styling each element with care. This website is a testament to self-learning, experimentation, and the relentless pursuit of a vision.
+      </p>
+    </div>
+
+    <div class="credit-category">
+      <h2>Inspiration</h2>
+      <p>This project draws heavy aesthetic and creative inspiration from the stunning design language of <a href="https://www.layers.shop" target="_blank"><strong>Layers.shop</strong></a>.</p>
+      <p>The clean visuals, animated transitions, and interactive components are rooted in admiration for their work.</p>
+      <p>Visual references, layout flow, and media assets like mockups and product visuals were adapted from <strong>Layers</strong>' public site and brand.</p>
+  
+    </div>
+
+    <div class="credit-category">
+      <h2>Tools</h2>
+      <ul>
+        <li><strong>Code Editor:</strong> Visual Studio Code</li>
+        <li><strong>Icons:</strong> <a href="https://fontawesome.com" target="_blank">Font Awesome 6</a></li>
+        <li><strong>Fonts:</strong> Handpicked from <a href="https://fonts.google.com" target="_blank">Google Fonts</a> for readability and character</li>
+        <li><strong>Design Tools:</strong> Figma (for layout planning)</li>
+        <li><strong>AI:</strong> The real MVP during debugging — my closest companion that's ChatGpt</li>
+    </ul>
+    </div>
+
+     <div  class="credit-category">
+     <h2><strong>Acknowledgements</strong></h2>
+     <p>Special thanks to the following sources for their assets, code snippets, and media used in this project:</p>
+     <ul>
+         <li><strong>Images:</strong> Various product mockups sourced from <a href="https://www.layers.shop" target="_blank">Layers.shop</a></li>
+         <li><strong>Video:</strong> <a href="https://youtu.be/ipxzS7djot4?si=wFkNha3X51v1AKaM" target="_blank">Branding Video of the Anarc Watch</a>,</li>
+         <li><strong>Fonts:</strong> Typography selections made using <a href="https://fonts.google.com" target="_blank">Google Fonts</a>, including <em>'Roboto'</em> and <em>'Poppins'</em>.</li>
+         <li><strong>Icons:</strong> All iconography used in this project comes from <a href="https://fontawesome.com" target="_blank">Font Awesome 6</a>.</li>
+     </ul>
+ </div>
+
+    <footer>
+      <p>&copy; 2025 Aryan. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    let autoScrollInterval;
+    let autoScrollStarted = false;
+  
+    function startAutoScroll() {
+      autoScrollStarted = true;
+      autoScrollInterval = setInterval(() => {
+        window.scrollBy(0, 2); // Scroll down by 2px every 20ms
+      }, 20);
+    }
+  
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+  
+    // Start auto-scroll after 5s
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        startAutoScroll();
+      }, 5000);
+    });
+  
+    // Detect manual scroll and stop auto-scroll
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      // If scroll direction is up or the user scrolled manually
+      if (autoScrollStarted && currentScrollY < lastScrollY) {
+        stopAutoScroll();
+      }
+  
+      lastScrollY = currentScrollY;
+    });
+  </script>
+  
+</body>
+</html>
