@@ -70,3 +70,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeWord();
 });
+
+window.addEventListener('load', function() {
+  const minWidth = 1920;  // Minimum screen width in pixels
+  const minHeight = 1080; // Minimum screen height in pixels
+
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  // Check if the screen width and height are less than the required resolution
+  if (screenWidth < minWidth || screenHeight < minHeight) {
+      document.getElementById('screen-warning').style.display = 'block';
+  }
+});
