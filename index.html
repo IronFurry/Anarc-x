@@ -1,0 +1,240 @@
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layers</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Iceland&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"rel="stylesheet"/><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar">
+  <div class="logo"><img src="logo.svg" /></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="credits.html">Credits</a>
+    <a href="buy.html">Anarc Watch</a>
+    <a href="#">Skins</a>
+  </div>
+  <div class="actions">
+    <a href="buy.html">
+      <button>Buy Now</button>
+    </a>
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+</nav>
+ <!-- Background Text -->
+ <div class="background-text">ANARC</div>
+
+  <model-viewer class="model" id="modelViewer5" src="models/anarc.glb" alt="Anarc Watch 5"  camera-controls disable-zoom></model-viewer>
+
+  <!-- Informative Text -->
+  <div class="info-text">
+    <p> Anarc Smartwatch: Unleash the chaos within. Monitor your heart rate, stress, and SpO2 with precision. Designed to disrupt</p>
+  </div>
+  
+  <div class="hero-heading">
+    <h1>Unleash <br> The Chaos</h1>
+    <div class="hero-info">
+      <p> built for those who <br> don't follow the rules</p>
+    </div>
+  </div>
+
+  <div class="slide2">
+    <video autoplay loop muted playsinline src="layers-anarc-smartwatch-techburner-smartwatch-brand-film-1440-publer.io.mp4"></video>
+    <div class="p1 text-behind">When<br>geometry<br>aligns with<br>beauty</div>
+    <div class="p1 text-above">When<br>geometry<br>aligns with<br>beauty</div>
+    <div class="p2 above">Forged in<br>stainless steel</div>
+    <div class="p2"><p>Forged in <br> stainless steel</p></div>
+  </div>
+  <div class="sec-3">
+      <img src="illuminate_without_glow_2_1.webp" alt="">
+      <div class="trapezium" id="trapezium"></div>
+    <div class="illuminate-text">
+      <h1>Illuminate every detail</h1>
+      <p>
+        <span>700 nits display</span> and <span>60Hz refresh rate</span> that shines through even in 
+        <span>bright sunlight</span>.
+      </p>
+    </div>
+  
+</div>
+  
+  <div class="sec-4">
+    <h1>Flagship chipset that's <br>high on performance.</h1>
+    <p>For a seamless experience as you transition from <br>work to play and everything in between.</p>
+    <div class="videos">
+      <h2>Live Wallpaper</h2>
+      <video autoplay loop muted playsinline src="live wallpaper-anarc.webm" style="border-radius: 20px  0px 0px 20px; "></video>
+      <h1>Functions</h1>
+      <video autoplay loop muted playsinline src="functions-anarc.mp4"style="border-radius:0px 0px 0px 0px;"></video>
+      <h3>3d motion</h3>
+      <video autoplay loop muted playsinline src="6-axis-anarc.webm" style="border-radius:0px 20px 20px 0px;"></video>
+    </div>
+  </div>
+
+  <div class="battery">
+    <img src="battery.png" alt="">
+    <div class="percentage1"><img src="red-battery.png" alt=""></div>
+    <div class="percentage2"><img src="red-battery.png" alt=""></div>
+    <div class="percentage3"><img src="red-battery.png" alt=""></div>
+    <div class="percentage4"><img src="red-battery.png" alt=""></div>
+    <div class="percentage5"><img src="red-battery.png" alt=""></div>
+  </div>
+  <div class="fitness">
+    <img src="bg for sec-4.webp" alt="">
+    <h1>Power through <br>7 days of everyday use.</h1>
+    <p>A 350 mAh battery that lets you chase chaos <br> without running out of power.</p>
+  </div>
+
+<div class="sec-5">
+    <img src="WhatsApp Image 2024-12-24 at 10.17.55 AM.jpeg" alt="" >
+    <div class="orbit">
+      <p>ANARC</p>
+      <div class="planet" data-feature="SpO2 Monitoring">
+        <img src="spo2.png" alt="SpO2">
+        <h1>Monitors blood oxygen levels to check respiratory health.</h1>
+      </div>
+      <div class="planet" data-feature="Heart Rate Monitoring">
+        <img src="heart rate.png" alt="Heart Rate">
+        <h2>Tracks heart rate 24/7. Useful for workouts and stress detection.</h2>
+      </div>
+      <div class="planet" data-feature="Fitness Tracking">
+        <img src="workout.png" alt="Fitness Tracking">
+        <h3>Logs steps, calories, and distance. Supports daily activity goals.</h3>
+      </div>
+      <div class="planet" data-feature="Sleep Monitoring">
+        <img src="sleep monitering.png" alt="Sleep Monitoring">
+        <h4>Analyzes sleep quality, including deep and REM phases.</h4>
+      </div>
+      <div class="planet" data-feature="breath">
+        <img src="breath.png" alt="breath">
+        <h5>Monitors breathing patterns for health and mindfulness exercises.</h5>
+      </div>
+      <div class="planet" data-feature="stress">
+        <img src="stress.png" alt="stress">
+        <h6>Measures stress with heart rate data. Suggests relaxation techniques.</h6>
+      </div>
+    </div>
+</div>
+<div class="image-container">
+  <img src="bg.png" alt="Image 1" id="img1">
+  <img src="bg1.png" alt="Image 2" id="img2">
+  <img src="bg2.png" alt="Image 3" id="img3">
+</div>
+
+
+  <div class="sec-6">
+    <model-viewer class="SixAxis" src="models/six-axis.glb" camera-controls camera-orbit="160deg " field-of-view="30deg" ></model-viewer>
+    <div class="p1 text-behind"><p>Fitness, <br>on point.</p></div>
+    <div class="p2 above"><p>A 6 axis motion sensor tracks all your <br> movements to give you accurate data <br> at all times.</p>
+    <p style="color: aqua; position: absolute; top: 140px;">As steady as Earth,<br> as accurate as you.</p></div>
+    
+
+  </div>
+
+    <div class="founders">
+      <img src="founders_2.webp" alt="Founders Image">
+    
+      <div class="blackbox"></div>
+      <div class="blackbox" id="blackbox2"></div>
+    
+      <div class="bluebox" id="bluebox1"></div>
+      <div class="bluebox" id="bluebox2"></div>
+      <div class="bluebox" id="bluebox3"></div>
+      <div class="bluebox" id="bluebox4"></div>
+    
+      <div class="bluebox" id="bluebox5">
+        <div class="content">
+          <p><b>
+            At Layers, we believe Chaos is a <br>
+            superpower. It helps you break out of<br>
+            moulds, do your own thing,find your own<br>
+            place.</b>
+          </p>
+          <p>
+            Without chaos there would be no innovation. <br>
+            Without chaos there would be no new ideas of <br>
+            greatness.
+          </p>
+          <p>
+            Chaos unsettles those who can't deal with it. <br>
+            We chase it.
+          </p>
+          <p>Neel & Shlok, Co-founders of Layers</p>
+        </div>
+      </div>
+    </div>
+    
+  <div class="color-buttons">
+  <p>Are you ready to be <br> an agent of chaos?  </p>
+  <model-viewer class="model1" src="models/Anarc.glb" camera-controls camera-orbit="30deg 30deg" field-of-view="30deg" ></model-viewer>
+  <model-viewer class="model2" src="models/Anarc white.glb" camera-controls camera-orbit="30deg 30deg" field-of-view="30deg" ></model-viewer>
+  <model-viewer class="model3" src="models/Anarc green.glb" camera-controls camera-orbit="30deg 30deg"field-of-view="30deg" ></model-viewer>
+  <p>Dark Brilliance</p>
+  <p>Frost Blaze</p>    
+  <p>Earthy Urban</p>
+  <a href="https://www.layers.shop/products/anarc">
+  <button onclick="">Buy Now at 6999/-</button></a>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="logo (1).svg" alt="">
+      <div class="footer-credits">
+        <p>Icons and assets from <a href="https://www.layers.shop/" target="_blank">Layers.shop</a> – all rights reserved by respective owners.</p>
+      </div>
+      <p>Copyright © 2025, Aryan. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Anarc Watch</li>
+        <li>Skins</li>
+        <div class="footer-a">
+            <li><a href="#">Customer Help Centre</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </div>
+      </ul>
+      <ul>
+        <li>Home<li>
+        <li>Credits</li>
+        <div class="footer-a">
+            <li><a href="#">Get in touch</a></li>
+            <li><a href="#">Sales Policy</a></li>
+        </div>
+      </ul>
+      <div class="footer-b">
+      <ul>
+        <a href="https://www.instagram.com/aryanknitin21"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/aryan-kate-654638331"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/IronFurry"><i class="fa-brands fa-github"></i></a>
+      </ul>
+      <ul>
+        <li><a href="">Terms of use</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js" ></script>
+</body>
+</html>
