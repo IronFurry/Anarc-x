@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer</title>
+    <link rel="stylesheet" href="model.css"><!-- Model‑Viewer web component -->
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+    
+    
+</head>
+<body>
+
+    <div class="back-button">
+        <a href="javascript:window.history.back()">← Back</a>
+    </div>
+
+    <!-- Watch Model Viewer -->
+    <div class="watch-container">
+        <model-viewer class="model" id="modelViewer5"
+        src="models/Anarc.glb"
+        alt="Anarc Watch 5"
+        camera-controls
+        environment-image="neutral"
+        shadow-intensity="1"
+        auto-rotate 
+        environment-image="assets/venice_sunset_1k.hdr">
+        </model-viewer>
+    </div>
+
+    <!-- Color Options -->
+    <div class="color-options">
+        <p>Choose your color:</p>
+        <div class="colors">
+          <button class="color-btn active" onclick="changeModel('dark-brilliance')">Dark Brilliance</button>
+          <button class="color-btn" onclick="changeModel('frost-blaze')">Frost Blaze</button>
+          <button class="color-btn" onclick="changeModel('earthy-Urban')">Earthy Urban</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to change model based on selected color
+        function changeModel(color) {
+          const modelViewer = document.getElementById('modelViewer5');
+          
+          // Change the model based on the selected color
+          switch(color) {
+            case 'dark-brilliance':
+              modelViewer.src = 'models/Anarc.glb';
+              break;
+            case 'frost-blaze':
+              modelViewer.src = 'models/Anarc white.glb';
+              break;
+            case 'earthy-Urban':
+              modelViewer.src = 'models/Anarc green.glb';
+              break;
+            default:
+              modelViewer.src = 'models/Anarc.glb'; // Default model
+          }
+      
+          // Update the button active state
+          const buttons = document.querySelectorAll('.color-btn');
+          buttons.forEach(button => {
+            button.classList.remove('active');
+          });
+          
+          // Highlight the active button
+          event.target.classList.add('active');
+        }  // Create multiple light elements
+        function createFishLight() {
+  const light = document.createElement('div');
+  light.classList.add('fish-light');
+
+  let leftStart = Math.random() < 0.5 ? -10 : 110; // start off-screen
+  const topBase = 50 + Math.random() * 40; // avoid top
+  const amplitude = 10 + Math.random() * 10;
+  const speed = Math.random(); // speed factor
+
+  let x = leftStart;
+  let direction = leftStart < 0 ? 1 : -1;
+
+  light.style.top = `${topBase}vh`;
+  light.style.left = `${x}vw`;
+
+  document.body.appendChild(light);
+
+  function animate() {
+    x += 0.1 * direction * speed;
+    const y = topBase + Math.sin(x / 5) * amplitude;
+    light.style.left = `${x}vw`;
+    light.style.top = `${y}vh`;
+
+    if ((direction === 1 && x > 110) || (direction === -1 && x < -10)) {
+      light.remove();
+      createFishLight(); // loop a new one
+    } else {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  animate();
+}
+
+for (let i = 0; i < 12; i++) {
+  setTimeout(createFishLight, i * 1000);
+}
+ 
+    </script>
+</body>
+</html>
