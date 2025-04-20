@@ -71,15 +71,32 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWord();
 });
 
-window.addEventListener('load', function() {
-  const minWidth = 1920;  // Minimum screen width in pixels
-  const minHeight = 1080; // Minimum screen height in pixels
 
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
+ // Get the current screen dimensions
+  const currentWidth = window.innerWidth;
+  const currentHeight = window.innerHeight;
+  
+  // Define the minimum size values
+  const minWidth = 1600;
+  const minHeight = 750;
 
-  // Check if the screen width and height are less than the required resolution
-  if (screenWidth < minWidth || screenHeight < minHeight) {
-      document.getElementById('screen-warning').style.display = 'block';
+  // Check if the current screen width and height meet the minimum requirement
+  if (currentWidth > minWidth || currentHeight > minHeight) {
+    document.body.innerHTML = `
+      <div style="
+        background:black;
+        color:white;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        font-size:1.5rem;
+        font-family:sans-serif;
+        padding:20px;
+      ">
+        This site is optimized for larger screens (like ASUS TUF F15 - 1920x1080).<br>
+        Please view on a compatible screen for the best experience.
+      </div>
+    `;
   }
-});
