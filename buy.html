@@ -10,24 +10,24 @@
     
 </head>
 <body>
-      <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo"><img src="logo.svg" /></div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="credits.html">Credits</a>
-      <a href="buy.html">Anarc Watch</a>
-      <a href="model.html">View</a>
-    </div>
-    <div class="actions">
-      <a href="buy.html">
-        <button>Buy Now</button>
-      </a>
-      <i class="fas fa-search"></i>
-      <i class="fas fa-user"></i>
-      <i class="fas fa-shopping-cart"></i>
-    </div>
-  </nav>
+ <!-- Navigation Bar -->
+ <nav class="navbar">
+  <div class="logo"><img src="logo.svg" /></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="credits.html">Credits</a>
+    <a href="buy.html">Anarc Watch</a>
+    <a href="model.html">View</a>
+  </div>
+  <div class="actions">
+    <a href="buy.html">
+      <button>Buy Now</button>
+    </a>
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+</nav>
   <div class="buy-section">
     <div class="product-info">
       <h1>Anarc Watch</h1>
@@ -70,13 +70,28 @@
       </div>
       
     <div class="watch-model">
-      <!-- Insert your <model-viewer> 3D watch here -->
-    </div>
+        
+      <model-viewer class="model" id="modelViewer5"
+      src="Anarc.glb"
+      alt="Anarc Watch 5"
+      camera-controls
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      environment-image="neutral"
+      shadow-intensity="1"
+      auto-rotate
+      disable-zoom>
+      
+  <a href="model.html"> 
+    <button slot="ar-button" class="ar-button">
+   👀 View in your space
+ </button></a>
+   </div>
+    
+    </model-viewer>
   </div>
   
-    
-  <model-viewer class="model" id="modelViewer5" src="Anarc.glb" alt="Anarc Watch 5"  camera-controls disable-zoom></model-viewer>
-
+  
   </section>
   <script>
     // Function to change model based on selected color
@@ -107,7 +122,7 @@
       // Highlight the active button
       event.target.classList.add('active');
     }
-   
+    
  // Get the current screen dimensions
   const currentWidth = window.innerWidth;
   const currentHeight = window.innerHeight;
